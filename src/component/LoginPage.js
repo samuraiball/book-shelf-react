@@ -10,7 +10,13 @@ import AppBar from '@material-ui/core/AppBar';
 
 
 const style = {
+    box:{
+        display: 'block'
+    },
     card: {
+        marginTop: 60,
+        marginLeft: 'auto',
+        marginRight: 'auto',
         maxWidth: 300
     },
     media: {
@@ -27,34 +33,41 @@ class LoginPage extends Component {
         const {classes} = this.props;
         return (
             <div>
-                <Card className={classes.card}>
-                    <AppBar position="static">
-                    <Toolbar></Toolbar>
-                    </AppBar>
-                    <CardContent>
-                        <TextField
-                            id="filled-password-input"
-                            label="E-mail"
-                            type="usrname"
-                            autoComplete="current-username"
-                            margin="normal"
-                            variant="filled"
-                        />
-                        <TextField
-                            id="filled-password-input"
-                            label="Password"
-                            type="password"
-                            autoComplete="current-password"
-                            margin="normal"
-                            variant="filled"
-                        />
-                    </CardContent>
-                    <CardActions>
-                        <Button variant="contained">
-                            Sing in
-                        </Button>
-                    </CardActions>
-                </Card>
+                <AppBar position="static">
+                    <Toolbar>
+                        Book-Shelf
+                    </Toolbar>
+                </AppBar>
+                <div className={classes.box}>
+                    <Card className={classes.card}>
+                        <AppBar position="static">
+                            <Toolbar>Log in</Toolbar>
+                        </AppBar>
+                        <CardContent>
+                            <TextField
+                                id="filled-password-input"
+                                label="E-mail"
+                                type="usrname"
+                                autoComplete="current-username"
+                                margin="normal"
+                                variant="filled"
+                            />
+                            <TextField
+                                id="filled-password-input"
+                                label="Password"
+                                type="password"
+                                autoComplete="current-password"
+                                margin="normal"
+                                variant="filled"
+                            />
+                        </CardContent>
+                        <CardActions>
+                            <Button variant="contained">
+                                Sing in
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </div>
             </div>
         )
     }
