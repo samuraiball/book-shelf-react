@@ -10,6 +10,9 @@ import AppBar from '@material-ui/core/AppBar';
 
 
 const style = {
+   color:{
+       background: '#ff5252'
+   },
     box:{
         display: 'block'
     },
@@ -34,14 +37,14 @@ class LoginPage extends Component {
         return (
             <div>
                 <AppBar position="static">
-                    <Toolbar>
+                    <Toolbar className={classes.color}>
                         Book-Shelf
                     </Toolbar>
                 </AppBar>
                 <div className={classes.box}>
                     <Card className={classes.card}>
                         <AppBar position="static">
-                            <Toolbar>Log in</Toolbar>
+                            <Toolbar className={classes.color}>Log in</Toolbar>
                         </AppBar>
                         <CardContent>
                             <TextField
