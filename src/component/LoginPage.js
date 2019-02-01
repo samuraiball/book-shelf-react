@@ -10,17 +10,28 @@ import AppBar from '@material-ui/core/AppBar';
 
 
 const style = {
-   color:{
-       background: '#ff5252'
-   },
-    box:{
+    color: {
+        background: '#ff5252'
+    },
+    box: {
         display: 'block'
     },
     card: {
         marginTop: 60,
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        maxWidth: 300
+        margin: 'auto',
+        maxWidth: 320,
+        height: 305
+    },
+    form: {
+        margin: 'auto',
+        maxWidth: 250
+    },
+    textBox: {
+        width: 250
+    },
+    button:{
+        margin: 'auto',
+        width: 250
     },
     media: {
         height: 0,
@@ -41,32 +52,42 @@ class LoginPage extends Component {
                         Book-Shelf
                     </Toolbar>
                 </AppBar>
-                <div className={classes.box}>
+                <div>
                     <Card className={classes.card}>
                         <AppBar position="static">
-                            <Toolbar className={classes.color}>Log in</Toolbar>
+                            <Toolbar className={classes.color}>
+                                Sing in to Book-Shelf
+                            </Toolbar>
                         </AppBar>
                         <CardContent>
-                            <TextField
-                                id="filled-password-input"
-                                label="E-mail"
-                                type="usrname"
-                                autoComplete="current-username"
-                                margin="normal"
-                                variant="filled"
-                            />
-                            <TextField
-                                id="filled-password-input"
-                                label="Password"
-                                type="password"
-                                autoComplete="current-password"
-                                margin="normal"
-                                variant="filled"
-                            />
+                            <div>
+                                <div className={classes.form}>
+                                    <TextField
+                                        className={classes.textBox}
+                                        id="filled-password-input"
+                                        label="E-mail"
+                                        type="usrname"
+                                        autoComplete="current-username"
+                                        margin="none"
+                                        variant="filled"
+                                    />
+                                </div>
+                                <div className={classes.form}>
+                                    <TextField
+                                        className={classes.textBox}
+                                        id="filled-password-input"
+                                        label="Password"
+                                        type="password"
+                                        autoComplete="current-password"
+                                        margin="normal"
+                                        variant="filled"
+                                    />
+                                </div>
+                            </div>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained">
-                                Sing in
+                            <Button variant="contained" className={classes.button}>
+                                login
                             </Button>
                         </CardActions>
                     </Card>
