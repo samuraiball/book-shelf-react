@@ -20,18 +20,19 @@ const style = {
         marginTop: 60,
         margin: 'auto',
         maxWidth: 320,
-        height: 305
+        height: 302
     },
     form: {
         margin: 'auto',
         maxWidth: 250
     },
     textBox: {
-        width: 250
+        width: 250,
     },
     button:{
         margin: 'auto',
-        width: 250
+        width: 250,
+        height: 43
     },
     media: {
         height: 0,
